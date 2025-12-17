@@ -3,6 +3,7 @@ import React from 'react'
 import { FaPinterest } from 'react-icons/fa'
 import { PiPinterestLogo } from 'react-icons/pi'
 import HeaderBar from './HeaderBar'
+import Link from 'next/link'
 
 const Header = () => {
     const logos = [
@@ -26,7 +27,9 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="lg:w-70 w-20">
+                        <Link href='/' >
                         <img src='https://themes-themegoods.b-cdn.net/letsblog/demo/wp-content/themes/letsblog/images/logo@2x.png' />
+                        </Link>
                     </div>
                     <div className="flex">
                         <Search />
