@@ -21,6 +21,21 @@ const AboutMe = () => {
         { id: 6, name: "Top", slug: "top" },
         { id: 7, name: "Travel", slug: "travel" }
     ];
+    const tags = [
+        "BRIDGE",
+        "CITY",
+        "COOKING",
+        "FAMILY",
+        "FOOD",
+        "LIFESTYLE",
+        "MODEL",
+        "NATURE",
+        "PHOTOGRAPHY",
+        "PORTRAIT",
+        "SPORT",
+        "TRAVEL"
+    ];
+
 
     return (
         <div className='px-2 space-y-8'>
@@ -48,19 +63,21 @@ const AboutMe = () => {
                     ))}
                 </div>
             </div>
-            <div className="">
-                <img src='https://themes-themegoods.b-cdn.net/letsblog/demo/wp-content/themes/letsblog/images/banner300x250.png' />
-            </div>
-            <div className="p-6 border space-y-4">
-                <h2 className='text-center text-[12px] '>CATEGORIES</h2>
-                {categories.map((category)=>(
-                    <div key={category.id} className=" mb-2 space-y-2">
-                        <Link href={`/categories/${category.slug}`} className='text-sm'>{category.name}</Link>
-                        <Separator />
-                    </div>
-                ))}
+            <div className="border py-6 px-3 space-y-3">
+                <h2 className='text-sm font-medium text-center '> TAGS</h2>
+                <div className="flex flex-wrap gap-2">
+                    {tags.map((tag) => (
+                        <span
+                            key={tag}
+                            className="text-[10px] px-2 py-1 border bg-gray-100 rounded"
+                        >
+                            {tag}
+                        </span>
+                    ))}
+                </div>
 
             </div>
+
         </div>
     )
 }
