@@ -71,7 +71,7 @@ const Home = async ({ params }: ParamsType) => {
                 <div className='flex justify-center py-5 h-150'>
                     <img className='w-full h-full' src='https://themes-themegoods.b-cdn.net/letsblog/demo/wp-content/uploads/2015/07/1.jpg' />
                 </div>
-                <div className='p-5 max-w-320 mx-auto'>
+                <div className='p-5 max-w-7xl mx-auto'>
                     <div className="md:grid grid-cols-3 gap-8  ">
                         <div className="flex flex-col justify-center items-center col-span-2  space-y-6">
                             <div className="text-center">
