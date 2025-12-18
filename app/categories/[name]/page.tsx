@@ -133,11 +133,11 @@ const CategoryPage = async ({ params }: PageProps) => {
 
     return (
         <div className='py-5'>
-            <div className="flex justify-center items-center py-17 bg-gray-100">
-                <h1 className='text-4xl font-medium'>{pageData.title}</h1>
+            <div className="flex justify-center items-center py-15 bg-gray-100">
+                <h1 className='md:text-4xl text-xl font-medium'>{pageData.title}</h1>
             </div>
-            <div className="max-w-300 mx-auto my-10">
-                <div className="grid grid-cols-3 gap-8">
+            <div className="max-w-300 mx-auto my-10 px-5">
+                <div className="grid md:grid-cols-3 gap-8">
                     {blogPosts.map((blog) => (
                         <div key={blog.id} className='space-y-3'>
                             <img src={blog.image} alt='d' />
