@@ -23,15 +23,15 @@ const DropDown = ({ subItems, label }: {label: string, subItems?: LinksType }) =
     const [openMenu, setOpenMenu] = useState(false)
 
     return (
-        <DropdownMenu open={openMenu} onOpenChange={setOpenMenu}>
+        <DropdownMenu open={openMenu} onOpenChange={setOpenMenu} >
             <DropdownMenuTrigger asChild>
-                <button onMouseEnter={() => setOpenMenu(true)} onMouseLeave={() => setOpenMenu(false)} className='py-1 px-2 cursor-pointer '>{label}</button>
+                <button  onMouseEnter={() => setOpenMenu(true)} onMouseLeave={() => setOpenMenu(false)}  className='py-1 text-[12px] hover:text-[#BE9656] font-medium px-2  cursor-pointer'>{label}</button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className={`w-56 -mt-1`} align="start" onMouseEnter={() => setOpenMenu(true)} onMouseLeave={() => setOpenMenu(false)}>
                 <DropdownMenuGroup>
                     {typeof subItems !== 'string' && subItems?.map((item) => (
                         <DropdownMenuItem key={item.label} >
-                            <Link href={item.link}>
+                            <Link className="text-[12px] hover:text-[#BE9656] font-medium" href={item.link}>
                                 {item.label}
                             </Link>
                         </DropdownMenuItem>
